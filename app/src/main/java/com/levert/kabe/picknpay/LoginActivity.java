@@ -13,8 +13,9 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
-import com.kosalgeek.genasync12.AsyncResponse;
-import com.kosalgeek.genasync12.PostResponseAsyncTask;
+import com.levert.kabe.picknpay.ServerAPI.JsonConverter;
+import com.levert.kabe.picknpay.ServerAPI.AsyncResponse;
+import com.levert.kabe.picknpay.ServerAPI.PostResponseAsyncTask;
 
 import java.util.HashMap;
 

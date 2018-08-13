@@ -16,9 +16,9 @@ import com.amigold.fundapter.FunDapter;
 import com.amigold.fundapter.extractors.StringExtractor;
 import com.amigold.fundapter.interfaces.DynamicImageLoader;
 import com.amigold.fundapter.interfaces.ItemClickListener;
-import com.kosalgeek.android.json.JsonConverter;
-import com.kosalgeek.genasync12.AsyncResponse;
-import com.kosalgeek.genasync12.PostResponseAsyncTask;
+import com.levert.kabe.picknpay.ServerAPI.JsonConverter;
+import com.levert.kabe.picknpay.ServerAPI.AsyncResponse;
+import com.levert.kabe.picknpay.ServerAPI.PostResponseAsyncTask;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.levert.kabe.picknpay.Interfaces.Products;
 import com.levert.kabe.picknpay.Interfaces.UILConfig;
@@ -33,9 +33,6 @@ import java.util.HashMap;
 public class AlcoholFragment extends Fragment implements AsyncResponse{
     public static final String PREFS = "prefFile";
 
-    //ImageButton beer, whisky, rum, vodka;
-
-    //final static String url = "http://group8.hol.es/alcohol.php";
     final static String url = "http://picknpaysystemmyversion.000webhostapp.com/FetchAlch.php";
 
 
@@ -61,54 +58,6 @@ public class AlcoholFragment extends Fragment implements AsyncResponse{
         PostResponseAsyncTask taskRead = new PostResponseAsyncTask(AlcoholFragment.this.getActivity(), this);
         taskRead.execute(url);
 
-        /*beer = (ImageButton)view.findViewById(R.id.ibBeer);
-        whisky = (ImageButton)view.findViewById(R.id.ibWhisky);
-        rum = (ImageButton)view.findViewById(R.id.ibRum);
-        vodka = (ImageButton)view.findViewById(R.id.ibVodka);
-
-
-
-        rum.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RumFragment rumFragment = new RumFragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().add(R.id.content_main, rumFragment,
-                        rumFragment.getTag()).hide(AlcoholFragment.this).addToBackStack("Rum").commit();
-            }
-        });
-
-        whisky.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                WhiskyFragment whiskyFragment = new WhiskyFragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().add(R.id.content_main, whiskyFragment,
-                        whiskyFragment.getTag()).hide(AlcoholFragment.this).addToBackStack("Whisky").commit();
-            }
-        });
-
-        beer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                BeerFragment beerFragment = new BeerFragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().add(R.id.content_main, beerFragment,
-                        beerFragment.getTag()).hide(AlcoholFragment.this).addToBackStack("Beer").commit();
-
-            }
-        });
-
-        vodka.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                VodkaFragment vodkaFragment = new VodkaFragment();
-                FragmentManager manager = getFragmentManager();
-                manager.beginTransaction().add(R.id.content_main, vodkaFragment,
-                        vodkaFragment.getTag()).hide(AlcoholFragment.this).addToBackStack("Vodka").commit();
-
-            }
-        });*/
 
         return view;
     }

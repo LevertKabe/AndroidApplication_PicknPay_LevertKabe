@@ -114,15 +114,21 @@ public class SignUpActivity extends AppCompatActivity {
                                         public void onClick(DialogInterface dialog, int which) {
                                             dialog.cancel();//closes the dialog box
                                         }
-                                    });
+                                    }
+                                    );
                             AlertDialog dialog = dialogBox.create();
                             dialog.setTitle("An Error was Detected!");
                             dialog.show();
                         }
+                        else{
+                            Log.d(LOG, s);
+                            Toast.makeText(SignUpActivity.this, "Insert Successful", Toast.LENGTH_LONG).show();
+
+                        }
 
                     }
                 });
-                taskInsert.execute("http://picknpaysystemmyversion.000webhostapp.com/RegisterFinal.php");
+                taskInsert.execute("http://picknpaysystemmyversion.000webhostapp.com/Android/RegisterFinal.php");
             }
         });
     }

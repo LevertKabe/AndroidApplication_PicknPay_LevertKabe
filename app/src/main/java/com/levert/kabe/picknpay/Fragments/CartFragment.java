@@ -22,9 +22,9 @@ import com.amigold.fundapter.FunDapter;
 import com.amigold.fundapter.extractors.StringExtractor;
 import com.amigold.fundapter.interfaces.DynamicImageLoader;
 import com.amigold.fundapter.interfaces.ItemClickListener;
-import com.kosalgeek.android.json.JsonConverter;
-import com.kosalgeek.genasync12.AsyncResponse;
-import com.kosalgeek.genasync12.PostResponseAsyncTask;
+import com.levert.kabe.picknpay.ServerAPI.JsonConverter;
+import com.levert.kabe.picknpay.ServerAPI.AsyncResponse;
+import com.levert.kabe.picknpay.ServerAPI.PostResponseAsyncTask;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.levert.kabe.picknpay.Interfaces.Cart;
 import com.levert.kabe.picknpay.Interfaces.UILConfig;
@@ -39,8 +39,6 @@ public class CartFragment extends Fragment implements AdapterView.OnItemClickLis
 
     final String LOG = "CartFragment";
     final static String url = "http://picknpaysystemmyversion.000webhostapp.com/FetchCart.php";
-    //final static String url = "http://group8.hol.es/cart_retrieve.php";
-
     View view;
 
     private ArrayList<Cart> itemList;
@@ -183,7 +181,7 @@ public class CartFragment extends Fragment implements AdapterView.OnItemClickLis
                     }
 
                 });
-                incTask.execute("http://group8.hol.es/cart_qty_inc.php");
+                incTask.execute("http://picknpaysystemmyversion.000webhostapp.com/incrQuantity.php");
             }
         });
 
@@ -215,8 +213,9 @@ public class CartFragment extends Fragment implements AdapterView.OnItemClickLis
                         }
 
                     });
-                    incTask.execute("http://group8.hol.es/cart_qty_dec.php");
+                    incTask.execute("http://picknpaysystemmyversion.000webhostapp.com/descQuant.php");
                 }
+
             }
         });
 

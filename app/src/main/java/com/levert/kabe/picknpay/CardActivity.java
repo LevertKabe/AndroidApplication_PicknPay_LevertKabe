@@ -15,8 +15,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kosalgeek.genasync12.AsyncResponse;
-import com.kosalgeek.genasync12.PostResponseAsyncTask;
+import com.levert.kabe.picknpay.ServerAPI.JsonConverter;
+import com.levert.kabe.picknpay.ServerAPI.AsyncResponse;
+import com.levert.kabe.picknpay.ServerAPI.PostResponseAsyncTask;
 import java.util.HashMap;
 
 
@@ -143,7 +144,7 @@ public class CardActivity extends AppCompatActivity {
             }
         });
 
-        cardTask.execute("http://group8.hol.es/cardDetails.php");
+        cardTask.execute("http://picknpaysystemmyversion.000webhostapp.com/Payment.php");
     }
 
 }

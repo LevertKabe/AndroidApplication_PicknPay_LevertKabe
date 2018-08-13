@@ -10,7 +10,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_detail">YardBird</string>
+    <string name="title_activity_detail">Pick n Pay</string>
 
     <!-- Empty Cart Text -->
     <string name="cart_empty">Your Shopping Cart is Empty.</string>

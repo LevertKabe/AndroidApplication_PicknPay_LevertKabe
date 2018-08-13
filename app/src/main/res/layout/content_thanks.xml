@@ -14,7 +14,7 @@
     tools:showIn="@layout/activity_thanks">
 
     <TextView
-        android:text="Thanks for ordering from YardBird, you food will be ready soon, your order number is 'INSERT ORDER NO. HERE'"
+        android:text="Thanks for ordering on Pick 'n Pay, you're food will be delivered to you soon'INSERT ORDER NO. HERE'"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize= "24sp"
